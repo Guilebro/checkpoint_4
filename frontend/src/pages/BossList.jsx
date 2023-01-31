@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from "axios";
+import Boss from "../components/Boss";
 import "./BossList.css";
-import ImageCard from "../components/ImageCard";
 
 function BossList() {
   const [bossList, setBossList] = useState([]);
@@ -20,19 +21,17 @@ function BossList() {
     <div>
       <div className="main">
         {bossList.map((element) => (
-          <div className="card">
-            {/* <div className="encart_double">
-              <div className="name_box">{element.name}</div>
-            </div> */}
-
-            <span className="name">{element.name}</span>
-            <span className="location">{element.location}</span>
-            <span className="mandatory">{`Obligatoire: ${element.mandatory}`}</span>
-            <div className="description">{element.description}</div>
-            <span className="difficulty">{`🌶️ ${element.difficulty}/10`}</span>
-            <div className="image">
-              <ImageCard picture={element.picture} />
-            </div>
+          <div>
+            <Link to={`/boss/${element.id}`} key={element.id}>
+              <Boss
+                name={element.name}
+                location={element.location}
+                mandatory={element.mandatory}
+                description={element.description}
+                difficulty={element.difficulty}
+                picture={element.picture}
+              />
+            </Link>
           </div>
         ))}
       </div>

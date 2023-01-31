@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import BossCard from "./pages/BossCard";
+import BossDetails from "./pages/BossDetails";
 import Error from "./pages/Error";
 import Thanks from "./pages/Thanks";
 import BossList from "./pages/BossList";
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/boss" element={<BossList />} />
-        <Route path="/boss/:id" element={<BossCard />} />
+        <Route path="/boss/:id" element={<BossDetails />} />
         <Route path="/thanks" element={<Thanks />} />
         <Route path="*" element={<Error />} />
       </Routes>

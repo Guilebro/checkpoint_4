@@ -1,6 +1,6 @@
 import React from "react";
 
-function BossCard() {
+function BossDetails() {
   return (
     <div>
       <p>BossCard</p>
@@ -8,4 +8,4 @@ function BossCard() {
   );
 }
 
-export default BossCard;
+export default BossDetails;

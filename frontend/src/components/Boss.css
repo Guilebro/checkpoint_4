@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Planewalker";
+  src: url("../fonts/Planewalker.otf");
+}
+
+.main {
+  font-family: "Planewalker";
+  margin-left: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vw;
+  width: 80vw;
+}
+
+.card {
+  position: relative;
+  color: rgb(1, 1, 1);
+  width: 18vw;
+  height: 50vh;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/funcard.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.name {
+  position: absolute;
+  top: 3vh;
+  left: 1.5vw;
+}
+
+.location {
+  position: absolute;
+  top: 28.5vh;
+  left: 2vw;
+  font-size: 0.8rem;
+}
+
+.image {
+  background-size: contain;
+  position: absolute;
+  left: 1.5vw;
+  top: 6vh;
+  width: 14.25vw;
+  height: 21.7vh;
+}
+
+.mandatory {
+  position: absolute;
+  font-size: 1rem;
+  top: 32vh;
+  left: 5.5vw;
+}
+
+.description {
+  position: absolute;
+  width: 13vw;
+  font-size: 10px;
+  text-align: justify;
+  top: 35vh;
+  left: 2vw;
+}
+
+.difficulty {
+  position: absolute;
+  top: 28.25vh;
+  left: 13vw;
+  font-size: 0.75rem;
+}
+
+/* .encart_double {
+  
+  width: 16vw;
+  height: 46vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.name_box {
+  border: solid rgb(106, 9, 196) 2px;
+  width: 90%;
+  background-color: beige;
+  height: 3.5vh;
+  margin-top: 1vh;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+} */

@@ -20,9 +20,11 @@ function BossList() {
       <div className="main">
         {bossList.map((element) => (
           <div className="card">
-            <div className="encart_double">
+            {/* <div className="encart_double">
               <div className="name_box">{element.name}</div>
-            </div>
+            </div> */}
+            <span className="name">{element.name}</span>
+            <span className="location">{element.location}</span>
           </div>
         ))}
       </div>

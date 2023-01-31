@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "Planewalker";
+  src: url("../fonts/Planewalker.otf");
+}
+
 body {
   background-image: url("../assets/bg.jpg");
 }
 
 .main {
+  font-family: "Planewalker";
   margin-left: 10vw;
   display: flex;
   flex-wrap: wrap;
@@ -12,24 +18,37 @@ body {
 }
 
 .card {
-  background-color: black;
+  position: relative;
   color: rgb(1, 1, 1);
   width: 18vw;
-  border: 2px Solid black;
   height: 50vh;
   transition: all 0.5s ease-in-out;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../assets/funcard.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .card:hover {
   transform: scale(1.2);
 }
 
-.encart_double {
-  background-image: url("../assets/prout.jpg");
+.name {
+  position: absolute;
+  top: 3vh;
+  left: 2vw;
+}
+
+.location {
+  position: absolute;
+  top: 28vh;
+}
+
+/* .encart_double {
+  
   width: 16vw;
   height: 46vh;
   border-radius: 10px;
@@ -47,4 +66,4 @@ body {
   display: flex;
   align-items: center;
   padding-left: 2px;
-}
+} */

@@ -1,0 +1,50 @@
+body {
+  background-image: url("../assets/bg.jpg");
+}
+
+.main {
+  margin-left: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vw;
+  width: 80vw;
+}
+
+.card {
+  background-color: black;
+  color: rgb(1, 1, 1);
+  width: 18vw;
+  border: 2px Solid black;
+  height: 50vh;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.encart_double {
+  background-image: url("../assets/prout.jpg");
+  width: 16vw;
+  height: 46vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.name_box {
+  border: solid rgb(106, 9, 196) 2px;
+  width: 90%;
+  background-color: beige;
+  height: 3.5vh;
+  margin-top: 1vh;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+}

@@ -6,4 +6,11 @@ const findAllBoss = () => {
   return db.query("SELECT * FROM boss");
 };
 
-module.exports = { findAllBoss };
+const findTitleByBossId = (id) => {
+  return db.query(
+    "SELECT * FROM game INNER JOIN boss ON game.id = boss.game_id WHERE boss.id = ?",
+    [Number(id)]
+  );
+};
+
+module.exports = { findAllBoss, findTitleByBossId };

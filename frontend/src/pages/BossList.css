@@ -39,13 +39,77 @@ body {
 .name {
   position: absolute;
   top: 3vh;
-  left: 2vw;
+  left: 1.5vw;
 }
 
 .location {
   position: absolute;
-  top: 28vh;
+  top: 28.5vh;
+  left: 2vw;
+  font-size: 0.8rem;
 }
+
+.image {
+  background-size: contain;
+  position: absolute;
+  left: 1.5vw;
+  top: 6vh;
+  width: 14.25vw;
+  height: 21.7vh;
+}
+
+.mandatory { 
+  position: absolute;
+  font-size: 1rem;
+  top: 32vh;
+  left:5.5vw;
+}
+
+.description {
+  position:absolute;
+  width: 13vw;
+  font-size: 10px;
+  text-align:justify;
+  top: 35vh;
+  left: 2vw;
+}
+
+.difficulty {
+  position: absolute;
+  top: 28.25vh;
+  left: 13vw;
+  font-size: 0.75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .encart_double {
   

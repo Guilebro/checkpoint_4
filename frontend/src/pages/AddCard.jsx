@@ -1,9 +1,11 @@
 import React from "react";
+import "./AddCard.css";
 
 function AddCard() {
   return (
-    <div>
-      <p style={{ color: "white" }}>Add</p>
+    <div className="main_addCard_div">
+      <p style={{ color: "white" }}>Ajouter une carte</p>
+      <form action="add_card" />
     </div>
   );
 }

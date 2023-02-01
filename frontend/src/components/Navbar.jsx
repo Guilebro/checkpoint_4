@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="first_try">
-        <Link to="/home" style={{ color: "gainsboro", textDecoration: "none" }}>
+        <Link to="/" style={{ color: "gainsboro", textDecoration: "none" }}>
           <p>Who's the boss</p>
         </Link>
       </div>

@@ -8,9 +8,8 @@ const port = process.env.APP_PORT || 8001;
 
 const cors = require("cors");
 
-const bossRouter = require("./router/bossRouter");
-
 const db = require("./config");
+const router = require("./router/index");
 
 const corsOptions = {
   origin: "*",
@@ -20,6 +19,7 @@ const corsOptions = {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors(corsOptions));
+app.use("/api", router);
 
 db.connect((err) => {
   if (err) {
@@ -28,8 +28,6 @@ db.connect((err) => {
     console.log(`Connecté à la database: ${process.env.DB_NAME}`);
   }
 });
-
-app.use("/api", bossRouter);
 
 app.listen(port, (err) => {
   if (err) {

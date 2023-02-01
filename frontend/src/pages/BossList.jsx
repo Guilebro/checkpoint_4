@@ -7,39 +7,65 @@ import "./BossList.css";
 
 function BossList() {
   const [bossList, setBossList] = useState([]);
+  const [gameList, setGameList] = useState([]);
+  const [gameSelected, setGameSelected] = useState("");
 
   const getBossList = () => {
     const url = "http://localhost:8000/api/boss";
     axios.get(url).then((response) => setBossList(response.data));
   };
 
+  const getGameList = () => {
+    const url = "http://localhost:8000/api/game";
+    axios.get(url).then((response) => setGameList(response.data));
+  };
+
   useEffect(() => {
     getBossList();
+    getGameList();
   }, []);
+
+  const handleChange = (e) => {
+    setGameSelected(Number(e.target.value));
+  };
 
   return (
     <div>
       <div className="div_select">
-        <select className="select" name="game_select" id="game">
-          <option value="">Filtrer par jeu</option>
+        <select
+          className="select"
+          name="game_select"
+          id="game"
+          onChange={handleChange}
+        >
+          <option value=""> Filtrer par jeu </option>
+          {gameList.map((el) => (
+            <option key={el.id} value={el.id}>
+              {el.title}
+            </option>
+          ))}
         </select>
       </div>
 
       <div className="main">
-        {bossList.map((element) => (
-          <div>
-            <Link to={`/boss/${element.id}`} key={element.id}>
-              <Boss
-                name={element.name}
-                location={element.location}
-                mandatory={element.mandatory}
-                description={element.description}
-                difficulty={element.difficulty}
-                picture={element.picture}
-              />
-            </Link>
-          </div>
-        ))}
+        {bossList
+          .filter(
+            (toto) => gameSelected === "" || toto.game_id === gameSelected
+          )
+          .map((element) => (
+            <div>
+              <Link to={`/boss/${element.id}`} key={element.id}>
+                <Boss
+                  name={element.name}
+                  location={element.location}
+                  mandatory={element.mandatory}
+                  description={element.description}
+                  difficulty={element.difficulty}
+                  picture={element.picture}
+                />
+              </Link>
+            </div>
+          ))}
       </div>
     </div>
   );

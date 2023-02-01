@@ -23,3 +23,7 @@ body {
   height: 4vh;
   font-family: "Planewalker";
 }
+
+.option {
+  margin-left: 4vw;
+}

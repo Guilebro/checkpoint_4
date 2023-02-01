@@ -3,7 +3,14 @@
   src: url("../fonts/Planewalker.otf");
 }
 
-.card {
+.div_card {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 15vw;
+  margin-top: 19.5vh;
+}
+
+.card_details {
   position: relative;
   color: rgb(1, 1, 1);
   width: 18vw;
@@ -18,27 +25,27 @@
   background-repeat: no-repeat;
 }
 
-.card:hover {
+.card_details:hover {
   transform: scale(1.2);
   box-shadow: 0px 0px 139px 58px rgba(255, 255, 255, 0.75);
   -webkit-box-shadow: 0px 0px 139px 58px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: 0px 0px 139px 58px rgba(255, 255, 255, 0.75);
 }
 
-.name {
+.name_details {
   position: absolute;
   top: 3vh;
   left: 1.5vw;
 }
 
-.location {
+.location_details {
   position: absolute;
   top: 28.5vh;
   left: 2vw;
   font-size: 0.8rem;
 }
 
-.image {
+.image_details {
   position: absolute;
   background-size: cover;
   left: 1.5vw;
@@ -47,14 +54,14 @@
   height: 21.7vh;
 }
 
-.mandatory {
+.mandatory_details {
   position: absolute;
   font-size: 1rem;
   top: 32vh;
   left: 5vw;
 }
 
-.description {
+.description_details {
   position: absolute;
   width: 13vw;
   font-size: 10px;
@@ -63,11 +70,29 @@
   left: 2vw;
 }
 
-.difficulty {
+.difficulty_details {
   position: absolute;
   top: 28.25vh;
   left: 13vw;
   font-size: 0.75rem;
+}
+
+.video_details {
+  position: absolute;
+  left: 45vw;
+  top: 25vh;
+}
+
+.combat {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Planewalker";
+}
+
+.div_combat {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
 }
 
 /* .encart_double {

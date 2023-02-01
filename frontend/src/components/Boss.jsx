@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import ImageCard from "./ImageCard";
+// import ImageCard from "./ImageCard";
 import "./Boss.css";
 
 function Boss({ name, location, mandatory, description, difficulty, picture }) {
@@ -11,8 +11,8 @@ function Boss({ name, location, mandatory, description, difficulty, picture }) {
       <span className="mandatory">{`Obligatoire: ${mandatory}`}</span>
       <div className="description">{description}</div>
       <span className="difficulty">{`🌶️ ${difficulty}/10`}</span>
-      <div className="image">
-        <ImageCard picture={picture} />
+      <div style={{ backgroundImage: `url(${picture}` }} className="image">
+        {/* <ImageCard picture={picture} /> */}
       </div>
     </div>
   );

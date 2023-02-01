@@ -8,11 +8,11 @@ const bossController = {
       .catch((err) => res.send(err));
   },
 
-  getTitleByBossId: (req, res) => {
+  getBossById: (req, res) => {
     const { id } = req.params;
     bossModel
-      .findTitleByBossId(id)
-      .then(([title]) => res.send(title))
+      .findOneBoss(id)
+      .then(([boss]) => res.send(boss))
       .catch((err) => res.send(err));
   },
 };

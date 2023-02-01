@@ -3,7 +3,7 @@ import React from "react";
 function Thanks() {
   return (
     <div>
-      <p>Le VRAI boss final c'est lui</p>
+      <p style={{ color: "white" }}>Le VRAI boss final c'est lui</p>
     </div>
   );
 }

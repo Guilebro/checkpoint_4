@@ -19,6 +19,12 @@ function BossList() {
 
   return (
     <div>
+      <div className="div_select">
+        <select className="select" name="game_select" id="game">
+          <option value="">Filtrer par jeu</option>
+        </select>
+      </div>
+
       <div className="main">
         {bossList.map((element) => (
           <div>

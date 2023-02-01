@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Planewalker";
+  src: url("../fonts/Planewalker.otf");
+}
+
+.navbar {
+  background-image: url("../assets/prout.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  margin-bottom: 10vh;
+  color: gainsboro;
+}
+
+.first_try {
+    font-family: "Planewalker";
+    font-size: 2.5rem;
+    margin-left: 2vw;
+}
+
+.nav_title {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 2vw;
+    font-size: 1.5rem;
+
+}
+
+.thanks:hover{
+    color: rgb(138, 131, 131)
+}
+
+.infos:hover {
+    color: rgb(138, 131, 131)
+}
+
+.add:hover {
+    color: rgb(138, 131, 131)
+}
+

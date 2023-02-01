@@ -11,6 +11,7 @@
 }
 
 .card_details {
+  font-family: "Planewalker";
   position: relative;
   color: rgb(1, 1, 1);
   width: 18vw;
@@ -93,6 +94,15 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2vh;
+}
+
+.game_name {
+  /* font-family: "Planewalker"; */
+  color: white;
+  position: absolute;
+  font-size: 1rem;
+  bottom: 15.25vh;
+  left: 19.9vw;
 }
 
 /* .encart_double {

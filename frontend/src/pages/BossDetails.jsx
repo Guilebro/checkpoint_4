@@ -8,14 +8,21 @@ import "./BossDetails.css";
 function BossDetails() {
   const { id } = useParams();
   const [oneBoss, setOneBoss] = useState([]);
+  const [gameByBoss, setGameByBoss] = useState([]);
+
+  const getGameByBoss = (idByBoss) => {
+    const url2 = `http://localhost:8000/api/game/byBoss/${idByBoss}`;
+    axios.get(url2).then((res) => setGameByBoss(res.data));
+  };
 
   const getOneBoss = (bossId) => {
-    const url = `http://localhost:8000/api/boss/${bossId}}`;
+    const url = `http://localhost:8000/api/boss/${bossId}`;
     axios.get(url).then((response) => setOneBoss(response.data));
   };
 
   useEffect(() => {
     getOneBoss(id);
+    getGameByBoss(id);
   }, []);
 
   return (
@@ -50,6 +57,11 @@ function BossDetails() {
           </>
         ))}
       </div>
+      {gameByBoss.map((el) => (
+        <div className="game_name">
+          <span style={{ fontSize: "0.75rem" }}>from</span> {el.title}
+        </div>
+      ))}
     </div>
   );
 }

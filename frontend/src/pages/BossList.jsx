@@ -26,7 +26,7 @@ function BossList() {
   }, []);
 
   const handleChange = (e) => {
-    setGameSelected(Number(e.target.value));
+    setGameSelected(e.target.value);
   };
 
   return (
@@ -38,7 +38,7 @@ function BossList() {
           id="game"
           onChange={handleChange}
         >
-          <option value=""> Filtrer par jeu </option>
+          <option value="">Tout les jeux</option>
           {gameList.map((el) => (
             <option key={el.id} value={el.id}>
               {el.title}
@@ -49,9 +49,8 @@ function BossList() {
 
       <div className="main">
         {bossList
-          .filter(
-            (toto) => gameSelected === "" || toto.game_id === gameSelected
-          )
+          // eslint-disable-next-line eqeqeq
+          .filter((toto) => gameSelected === "" || toto.game_id == gameSelected)
           .map((element) => (
             <div>
               <Link to={`/boss/${element.id}`} key={element.id}>

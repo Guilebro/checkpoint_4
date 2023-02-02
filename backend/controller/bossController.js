@@ -34,6 +34,17 @@ const bossController = {
         res.status(500).send({ message: "Les champs doivent etre complétés!" });
       });
   },
+
+  deleteOneBoss: (req, res) => {
+    const { id } = req.params;
+    bossModel.removeOneBoss(id).then((result) => {
+      if (result.affectedRows !== 0) {
+        res.send(`Le carte de boss à été supprimé`);
+      } else {
+        res.status(400).send("Boss introuvable");
+      }
+    });
+  },
 };
 
 module.exports = bossController;

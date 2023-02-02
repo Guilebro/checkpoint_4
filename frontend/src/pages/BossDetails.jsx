@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import "./BossDetails.css";
 
 function BossDetails() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [oneBoss, setOneBoss] = useState([]);
   const [gameByBoss, setGameByBoss] = useState([]);
@@ -25,8 +26,17 @@ function BossDetails() {
     getGameByBoss(id);
   }, []);
 
+  const handleClick = () => {
+    const url3 = `http://localhost:8000/api/boss/${id}`;
+    axios.delete(url3).then(alert("La carte à été supprimée!"));
+    navigate("/boss");
+  };
+
   return (
     <div className="general">
+      <button className="remove_button" type="button" onClick={handleClick}>
+        x
+      </button>
       <div className="div_card">
         {oneBoss.map((element) => (
           <>
@@ -39,9 +49,7 @@ function BossDetails() {
               <div
                 style={{ backgroundImage: `url(${element.picture}` }}
                 className="image_details"
-              >
-                {/* <ImageCard picture={picture} /> */}
-              </div>
+              />
             </div>
             <div className="video_details">
               <div className="div_combat">

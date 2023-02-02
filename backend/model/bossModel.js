@@ -14,4 +14,8 @@ const createOneBoss = (payload) => {
   return db.query("INSERT INTO boss SET ?", [payload]);
 };
 
-module.exports = { findAllBoss, findOneBoss, createOneBoss };
+const removeOneBoss = (id) => {
+  return db.query("DELETE FROM boss WHERE id = ?", [id]);
+};
+
+module.exports = { findAllBoss, findOneBoss, createOneBoss, removeOneBoss };

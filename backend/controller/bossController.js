@@ -45,6 +45,18 @@ const bossController = {
       }
     });
   },
+
+  updateOneBoss: (req, res) => {
+    const { id } = req.params;
+    const bossData = req.body;
+    bossModel.modifyOneBoss(bossData, id).then((result) => {
+      if (result.affectedRows !== 0) {
+        res.send("La carte à été modifiée!");
+      } else {
+        res.status(400).send(" Modification impossible...");
+      }
+    });
+  },
 };
 
 module.exports = bossController;

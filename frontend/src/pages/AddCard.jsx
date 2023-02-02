@@ -52,6 +52,15 @@ function AddCard() {
           if (res.status === 201) {
             alert(res.data.message);
           }
+          setAddNewBoss({
+            name: null,
+            localisation: null,
+            picture: null,
+            description: null,
+            mandatory: null,
+            difficulty: null,
+            video: null,
+          });
         });
     }
   };

@@ -2,23 +2,19 @@ import React, { useState, useEffect } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 import "./BossDetails.css";
 
 function BossDetails() {
+  const { getOneBoss, oneBoss } = useAuth();
   const navigate = useNavigate();
   const { id } = useParams();
-  const [oneBoss, setOneBoss] = useState([]);
   const [gameByBoss, setGameByBoss] = useState([]);
 
   const getGameByBoss = (idByBoss) => {
     const url2 = `http://localhost:8000/api/game/byBoss/${idByBoss}`;
     axios.get(url2).then((res) => setGameByBoss(res.data));
-  };
-
-  const getOneBoss = (bossId) => {
-    const url = `http://localhost:8000/api/boss/${bossId}`;
-    axios.get(url).then((response) => setOneBoss(response.data));
   };
 
   useEffect(() => {
@@ -32,10 +28,17 @@ function BossDetails() {
     navigate("/boss");
   };
 
+  const handleNavigate = () => {
+    navigate(`/update/${id}`);
+  };
+
   return (
     <div className="general">
       <button className="remove_button" type="button" onClick={handleClick}>
         x
+      </button>
+      <button className="update_button" type="button" onClick={handleNavigate}>
+        Modifier
       </button>
       <div className="div_card">
         {oneBoss.map((element) => (

@@ -4,6 +4,7 @@ import Error from "./pages/Error";
 import Thanks from "./pages/Thanks";
 import BossList from "./pages/BossList";
 import AddCard from "./pages/AddCard";
+import UpdateCard from "./pages/UpdateCard";
 import Informations from "./pages/Informations";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/boss" element={<BossList />} />
         <Route path="/boss/:id" element={<BossDetails />} />
         <Route path="/add" element={<AddCard />} />
+        <Route path="/update/:id" element={<UpdateCard />} />
         <Route path="/thanks" element={<Thanks />} />
         <Route path="/infos" element={<Informations />} />
         <Route path="*" element={<Error />} />

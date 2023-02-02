@@ -8,6 +8,7 @@ export function AuthProvider({ children }) {
   const { Provider } = authContext;
   const [gameList, setGameList] = useState([]);
   const [bossList, setBossList] = useState([]);
+  const [oneBoss, setOneBoss] = useState([]);
 
   const getGameList = () => {
     const url = "http://localhost:8000/api/game";
@@ -19,8 +20,22 @@ export function AuthProvider({ children }) {
     axios.get(url).then((response) => setBossList(response.data));
   };
 
+  const getOneBoss = (bossId) => {
+    const url = `http://localhost:8000/api/boss/${bossId}`;
+    axios.get(url).then((response) => setOneBoss(response.data));
+  };
+
   return (
-    <Provider value={{ gameList, getGameList, getBossList, bossList }}>
+    <Provider
+      value={{
+        gameList,
+        getGameList,
+        getBossList,
+        bossList,
+        getOneBoss,
+        oneBoss,
+      }}
+    >
       {children}
     </Provider>
   );

@@ -18,4 +18,14 @@ const removeOneBoss = (id) => {
   return db.query("DELETE FROM boss WHERE id = ?", [id]);
 };
 
-module.exports = { findAllBoss, findOneBoss, createOneBoss, removeOneBoss };
+const modifyOneBoss = (payload, id) => {
+  return db.query("UPDATE boss SET ? WHERE id = ?", [payload, id]);
+};
+
+module.exports = {
+  findAllBoss,
+  findOneBoss,
+  createOneBoss,
+  removeOneBoss,
+  modifyOneBoss,
+};

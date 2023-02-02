@@ -6,19 +6,7 @@ import "./BossList.css";
 
 function BossList() {
   const { getGameList, gameList, getBossList, bossList } = useAuth();
-  // const [bossList, setBossList] = useState([]);
-  // const [gameList, setGameList] = useState([]);
   const [gameSelected, setGameSelected] = useState("");
-
-  // const getBossList = () => {
-  //   const url = "http://localhost:8000/api/boss";
-  //   axios.get(url).then((response) => setBossList(response.data));
-  // };
-
-  // const getGameList = () => {
-  //   const url = "http://localhost:8000/api/game";
-  //   axios.get(url).then((response) => setGameList(response.data));
-  // };
 
   useEffect(() => {
     getBossList();

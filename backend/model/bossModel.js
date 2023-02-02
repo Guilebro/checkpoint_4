@@ -10,4 +10,8 @@ const findOneBoss = (id) => {
   return db.query("SELECT * FROM boss WHERE id = ? ", [id]);
 };
 
-module.exports = { findAllBoss, findOneBoss };
+const createOneBoss = (payload) => {
+  return db.query("INSERT INTO boss SET ?", [payload]);
+};
+
+module.exports = { findAllBoss, findOneBoss, createOneBoss };

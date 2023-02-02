@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import axios from "axios";
 import Boss from "../components/Boss";
+import { useAuth } from "../contexts/AuthContext";
 import "./BossList.css";
 
 function BossList() {
-  const [bossList, setBossList] = useState([]);
-  const [gameList, setGameList] = useState([]);
+  const { getGameList, gameList, getBossList, bossList } = useAuth();
+  // const [bossList, setBossList] = useState([]);
+  // const [gameList, setGameList] = useState([]);
   const [gameSelected, setGameSelected] = useState("");
 
-  const getBossList = () => {
-    const url = "http://localhost:8000/api/boss";
-    axios.get(url).then((response) => setBossList(response.data));
-  };
+  // const getBossList = () => {
+  //   const url = "http://localhost:8000/api/boss";
+  //   axios.get(url).then((response) => setBossList(response.data));
+  // };
 
-  const getGameList = () => {
-    const url = "http://localhost:8000/api/game";
-    axios.get(url).then((response) => setGameList(response.data));
-  };
+  // const getGameList = () => {
+  //   const url = "http://localhost:8000/api/game";
+  //   axios.get(url).then((response) => setGameList(response.data));
+  // };
 
   useEffect(() => {
     getBossList();

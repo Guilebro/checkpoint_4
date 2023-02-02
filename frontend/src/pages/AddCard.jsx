@@ -29,6 +29,9 @@ function AddCard() {
             setAddNewBoss={setAddNewBoss}
           />
         ))}
+        <button className="button" type="submit">
+          Générer
+        </button>
       </form>
     </div>
   );

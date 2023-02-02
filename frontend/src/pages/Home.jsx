@@ -4,7 +4,7 @@ import "./Home.css";
 function Home() {
   return (
     <div>
-      <p>Home</p>
+      <p style={{ color: "white", fontSize: "3rem" }}>Home</p>
     </div>
   );
 }

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddCardInput from "../components/AddCardInput";
+import { useAuth } from "../contexts/AuthContext";
 import inputArray from "../utils/input_array";
 import "./AddCard.css";
 
 function AddCard() {
+  const { getGameList, gameList } = useAuth();
   const [addNewBoss, setAddNewBoss] = useState({
     name: null,
     localisation: null,
@@ -14,9 +16,19 @@ function AddCard() {
     video: null,
   });
 
+  useEffect(() => {
+    getGameList();
+  }, []);
+
   return (
     <div className="main_addCard_div">
       <form className="form" action="add_card">
+        <select name="game_select" id="game">
+          <option value="">Choisissez votre jeu</option>
+          {gameList.map((el) => (
+            <option>{el.title}</option>
+          ))}
+        </select>
         {inputArray.map((element) => (
           <AddCardInput
             id={element.id}

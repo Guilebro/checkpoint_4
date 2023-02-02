@@ -120,6 +120,11 @@
   animation: vibrate-2 0.3s linear infinite both;
 }
 
+.update_button:hover {
+  -webkit-animation: vibrate-2 0.3s linear infinite both;
+  animation: vibrate-2 0.3s linear infinite both;
+}
+
 .update_button {
   position: absolute;
     background-color: red;

@@ -16,7 +16,7 @@ const inputArray = [
     label: "Localisation",
     value: "",
     type: "text",
-    name: "location",
+    name: "localisation",
     placeholder: "localisation",
     classNameInput: "addLocation_input",
   },
@@ -24,7 +24,7 @@ const inputArray = [
   {
     id: 3,
     classNameDiv: "addPicture_div",
-    label: "image",
+    label: "Image",
     value: "",
     type: "text",
     name: "picture",

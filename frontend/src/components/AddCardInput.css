@@ -1,0 +1,13 @@
+.classNameDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.classNameInput {
+  height: 5vh;
+  width: 12vw;
+}
+
+.classNameLabel {
+  color: white;
+}

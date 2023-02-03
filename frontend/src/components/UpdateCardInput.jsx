@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import "./UpdateCardInput.css";
 
 function updateCardInput({
   id,

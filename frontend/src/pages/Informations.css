@@ -1,0 +1,24 @@
+.master_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infos_div {
+  width: 40vw;
+  height: auto;
+  margin-top: 15vh;
+  background-color: rgba(0, 0, 0, 0.51);
+}
+
+.infos_text {
+  font-size: 1.25rem;
+  text-align: justify;
+  line-height: 5vh;
+}
+
+.infos_title {
+  color: white;
+  font-family: "Planewalker";
+}

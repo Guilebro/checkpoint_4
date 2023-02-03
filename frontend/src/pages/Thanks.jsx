@@ -1,9 +1,11 @@
 import React from "react";
+import david from "../assets/David_Faure_.png";
+import "./Thanks.css";
 
 function Thanks() {
   return (
-    <div>
-      <p style={{ color: "white" }}>Le VRAI boss final c'est lui</p>
+    <div className="main_div_thanks">
+      <img className="david" src={david} alt="david" />
     </div>
   );
 }

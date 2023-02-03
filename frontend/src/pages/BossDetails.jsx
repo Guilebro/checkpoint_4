@@ -35,7 +35,7 @@ function BossDetails() {
   return (
     <div className="general">
       <button className="remove_button" type="button" onClick={handleClick}>
-        x
+        X
       </button>
       <button className="update_button" type="button" onClick={handleNavigate}>
         Modifier

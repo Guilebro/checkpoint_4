@@ -127,12 +127,12 @@
 
 .update_button {
   position: absolute;
-    background-color: red;
-    color: white;
-    bottom: 10vh;
-    left: 23vw;
-    width: 5vw;
-    height: 4vh;
+  background-color: rgb(53, 51, 51);
+  color: white;
+  bottom: 10vh;
+  left: 23vw;
+  width: 5vw;
+  height: 4vh;
 }
 
 @-webkit-keyframes vibrate-2 {

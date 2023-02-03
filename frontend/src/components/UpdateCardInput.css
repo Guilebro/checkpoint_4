@@ -1,0 +1,18 @@
+.classNameDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.classNameInput {
+  height: 5vh;
+  width: 20vw;
+}
+
+.classNameInput::placeholder {
+  font-style: italic;
+  padding-left: 0.5vw;
+}
+
+.classNameLabel {
+  color: white;
+}

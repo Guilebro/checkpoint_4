@@ -4,6 +4,7 @@ import axios from "axios";
 import inputArray from "../utils/input_array";
 import UpdateCardInput from "../components/UpdateCardInput";
 import { useAuth } from "../contexts/AuthContext";
+import "./UpdateCard.css";
 
 const updateCard = () => {
   const { id } = useParams();
@@ -34,8 +35,13 @@ const updateCard = () => {
       .then(alert("La carte à été modifiée 😁"));
   };
   return (
-    <div>
-      <form action="update_card" onSubmit={handleSubmit}>
+    <div className="main_updateCard_div">
+      <h1 className="update_title">MODIFIER VOTRE CARTE</h1>
+      <form
+        className="update_form"
+        action="update_card"
+        onSubmit={handleSubmit}
+      >
         {inputArray.map((element) => (
           <UpdateCardInput
             id={element.id}
@@ -48,7 +54,7 @@ const updateCard = () => {
             setUpdateBoss={setUpdateBoss}
           />
         ))}
-        <button className="button" type="submit">
+        <button className="regenerate_button" type="submit">
           Générer
         </button>
       </form>

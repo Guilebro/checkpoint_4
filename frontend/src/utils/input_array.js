@@ -50,7 +50,7 @@ const inputArray = [
     value: "",
     type: "text",
     name: "mandatory",
-    placeholder: "est-il obligatoire?",
+    placeholder: "oui / non",
     classNameInput: "addMandatory_input",
   },
 

@@ -5,7 +5,12 @@
 
 .classNameInput {
   height: 5vh;
-  width: 12vw;
+  width: 20vw;
+}
+
+.classNameInput::placeholder {
+  font-style: italic;
+  padding-left: 0.5vw;
 }
 
 .classNameLabel {

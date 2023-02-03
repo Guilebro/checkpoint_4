@@ -26,14 +26,13 @@ function AddCard() {
     e.preventDefault();
     const url = "http://localhost:8000/api/boss";
     if (
-      gameSelected === "" &&
-      addNewBoss.name === null &&
-      addNewBoss.localisation === null &&
-      addNewBoss.picture === null &&
-      addNewBoss.description === null &&
-      addNewBoss.mandatory === null &&
-      addNewBoss.difficulty === null &&
-      addNewBoss.video === null
+      gameSelected === "" ||
+      addNewBoss.name === null ||
+      addNewBoss.localisation === null ||
+      addNewBoss.picture === null ||
+      addNewBoss.description === null ||
+      addNewBoss.mandatory === null ||
+      addNewBoss.difficulty === null
     ) {
       alert("Les champs doivent etre complétés !!");
     } else {
@@ -61,6 +60,7 @@ function AddCard() {
             difficulty: null,
             video: null,
           });
+          SetGameSelected("");
         });
     }
   };
@@ -69,8 +69,14 @@ function AddCard() {
   };
   return (
     <div className="main_addCard_div">
-      <form className="form" action="add_card" onSubmit={handleSubmit}>
-        <select name="game_select" id="game" onChange={handleChange}>
+      <h1 className="add_title">CRÉER VOTRE CARTE </h1>
+      <form className="add_form" action="add_card" onSubmit={handleSubmit}>
+        <select
+          className="game_select"
+          name="game_select"
+          id="game"
+          onChange={handleChange}
+        >
           <option value="">Choisissez votre jeu</option>
           {gameList.map((el) => (
             <option value={el.id}>{el.title}</option>
@@ -88,7 +94,7 @@ function AddCard() {
             setAddNewBoss={setAddNewBoss}
           />
         ))}
-        <button className="button" type="submit">
+        <button className="add_button" type="submit">
           Générer
         </button>
       </form>

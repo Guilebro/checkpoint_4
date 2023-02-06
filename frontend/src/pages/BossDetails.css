@@ -79,22 +79,22 @@
 }
 
 .video_details {
-  position: absolute;
-  left: 45vw;
-  top: 25vh;
-}
-
-.combat {
-  color: white;
-  font-size: 1.5rem;
-  font-family: "Planewalker";
-}
-
-.div_combat {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 2vh;
+  margin-left: 10vw;
 }
+
+  .combat {
+    position: absolute;
+    left: 53vw;
+    top: 25vh;
+    gap: 2vh;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Planewalker";
+  }
 
 .game_name {
   color: white;

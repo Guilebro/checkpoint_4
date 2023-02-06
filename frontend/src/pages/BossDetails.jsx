@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from "axios";
+import ReactPlayer from "react-player";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
@@ -55,14 +56,12 @@ function BossDetails() {
               />
             </div>
             <div className="video_details">
-              <div className="div_combat">
-                <p className="combat">DÉROULEMENT DU COMBAT</p>
-              </div>
-              <iframe
-                width="560"
-                height="315"
-                src={element.video}
-                title="Video"
+              <p className="combat">DÉROULEMENT DU COMBAT</p>
+              <ReactPlayer
+                url={element.video}
+                width="45vw"
+                height="50vh"
+                style={{ backgroundColor: "black" }}
               />
             </div>
           </>
